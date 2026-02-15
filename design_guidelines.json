@@ -1,0 +1,181 @@
+{
+  "brand_identity": {
+    "name": "UNIFY",
+    "mission": "To unify the fragmented university admission process into a seamless, intelligent, and human-centric experience.",
+    "emotional_tone": "Professional, Trustworthy, Efficient, Modern, Unified",
+    "visual_archetype": "Swiss & High-Contrast (Authority, Clarity) with a 'Deep Indigo' twist for Dark Mode.",
+    "target_audience": [
+      "Super Admins (Power Users)",
+      "University Admins (Configurators)",
+      "Counsellors (Operational)",
+      "Students (Applicants)"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Plus Jakarta Sans, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "usage_rules": {
+      "headings": "Use 'Plus Jakarta Sans' for all H1-H6. Weight: Bold (700) or ExtraBold (800) for H1/H2. Letter-spacing: 'tracking-tight'.",
+      "body": "Use 'Inter' for all paragraphs, inputs, and data tables. Weight: Regular (400) or Medium (500).",
+      "labels": "Uppercase, tracking-widest, text-xs, font-semibold (e.g., 'APPLICATION STATUS')."
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-bold tracking-tight",
+      "h3": "text-2xl font-semibold tracking-tight",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed",
+      "caption": "text-sm text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "UNIFY Blue",
+        "hex": "#2563EB",
+        "tailwind": "bg-blue-600",
+        "description": "Vibrant electric blue. Use for primary actions (Buttons, Active States, Links)."
+      },
+      "secondary": {
+        "name": "Slate",
+        "hex": "#64748B",
+        "tailwind": "bg-slate-500",
+        "description": "Muted blue-grey. Use for secondary text, borders, and inactive icons."
+      },
+      "background_light": {
+        "hex": "#FFFFFF",
+        "tailwind": "bg-white",
+        "description": "Pure white for maximum clarity in Light Mode."
+      },
+      "background_dark": {
+        "hex": "#0F172A",
+        "tailwind": "bg-slate-900",
+        "description": "Deep Indigo/Slate. NOT pure black. Creates a premium enterprise feel."
+      },
+      "surface_dark": {
+        "hex": "#1E293B",
+        "tailwind": "bg-slate-800",
+        "description": "Lighter slate for cards/sidebars in Dark Mode."
+      },
+      "success": {
+        "hex": "#10B981",
+        "tailwind": "text-emerald-500",
+        "description": "For 'Admitted', 'Paid', 'Verified' statuses."
+      },
+      "warning": {
+        "hex": "#F59E0B",
+        "tailwind": "text-amber-500",
+        "description": "For 'Pending', 'Under Review' statuses."
+      },
+      "error": {
+        "hex": "#EF4444",
+        "tailwind": "text-red-500",
+        "description": "For 'Rejected', 'Failed', 'Overdue' statuses."
+      }
+    },
+    "gradients": {
+      "hero_glow": "bg-gradient-to-r from-blue-600 to-indigo-600",
+      "subtle_overlay": "bg-gradient-to-b from-transparent to-slate-900/50"
+    }
+  },
+  "layout_strategies": {
+    "admin_dashboard": {
+      "type": "Control Room Grid (Mode B)",
+      "structure": "Sidebar (Fixed Left) + Topbar (Sticky) + Main Content Area (Scrollable)",
+      "grid_rules": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6. Widgets must stretch to fill height.",
+      "spacing": "Dense. p-4 or p-6 for containers. gap-4 for internal lists."
+    },
+    "student_portal": {
+      "type": "Tetris Grid (Mode A) & Centered Focus",
+      "structure": "Top Nav (Sticky) + Hero (Welcome) + Action Grid + Application Status Tracker",
+      "grid_rules": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8. Use 'Hero' span for the main 'Resume Application' card.",
+      "spacing": "Generous. p-8 or p-12. Breathing room is key for reducing anxiety."
+    },
+    "landing_page": {
+      "type": "Asymmetric Bento",
+      "structure": "Hero (Left Text, Right 3D/Image) + Feature Grid (Bento) + Testimonials (Marquee) + Footer",
+      "spacing": "Luxurious. py-24 or py-32 for section gaps."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-md bg-blue-600 text-white hover:bg-blue-700 shadow-sm transition-all active:scale-95 font-medium px-6 py-2.5",
+      "secondary": "rounded-md border border-slate-200 bg-white text-slate-900 hover:bg-slate-50 shadow-sm transition-all active:scale-95 font-medium px-6 py-2.5 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:hover:bg-slate-700",
+      "ghost": "rounded-md hover:bg-slate-100 text-slate-600 hover:text-slate-900 transition-colors dark:hover:bg-slate-800 dark:text-slate-400 dark:hover:text-white"
+    },
+    "cards": {
+      "dashboard": "rounded-xl border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-50",
+      "feature": "group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 hover:border-blue-500/50 transition-colors dark:border-slate-800 dark:bg-slate-900",
+      "glass": "backdrop-blur-xl bg-white/70 border border-white/20 shadow-sm dark:bg-slate-900/60 dark:border-white/10"
+    },
+    "inputs": {
+      "default": "flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-blue-600"
+    },
+    "status_badge": {
+      "base": "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+      "success": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+      "warning": "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400",
+      "error": "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400",
+      "neutral": "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-400"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use for Sticky Headers, Modals, and Toasts. Class: 'backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/50 dark:border-slate-800/50'.",
+    "grid_borders": "For Admin Dashboard tables: Use 'divide-y divide-slate-200 dark:divide-slate-800' and 'border-b border-slate-200 dark:border-slate-800'.",
+    "gradients": "Avoid full-screen gradients. Use subtle 'spotlight' gradients in the background for Dark Mode hero sections.",
+    "shadows": "Use 'shadow-sm' for most cards. Use 'shadow-xl' + 'shadow-blue-900/20' for floating elements or active states."
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "micro_interactions": "Active elements should scale down slightly (active:scale-95). Links should have a color shift.",
+    "page_transition": "Fade in + Slide up (10px). Duration: 0.3s.",
+    "list_stagger": "Stagger list items by 0.05s for a cascading entrance effect."
+  },
+  "accessibility": {
+    "contrast": "Ensure text is at least 4.5:1 against background. Use 'text-slate-900' on white, 'text-white' on dark slate.",
+    "focus_states": "Visible focus rings are MANDATORY. Use 'focus-visible:ring-2 focus-visible:ring-blue-600'.",
+    "aria": "All interactive elements must have aria-labels if no text is present (e.g., icon buttons)."
+  },
+  "image_urls": {
+    "landing_hero": {
+      "url": "https://images.unsplash.com/photo-1612277107663-a65c0f67be64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwbW9kZXJuJTIwYXJjaGl0ZWN0dXJlJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzY4MzAwMzYwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern university hallway with students, bright and welcoming. Use for Landing Page Hero background or side image.",
+      "category": "hero"
+    },
+    "student_community": {
+      "url": "https://images.unsplash.com/photo-1653669487404-09c3617c2b6c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwY2FtcHVzJTIwbW9kZXJuJTIwYXJjaGl0ZWN0dXJlJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzY4MzAwMzYwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Diverse group of students studying together. Use for 'Student Life' or 'Community' section.",
+      "category": "content"
+    },
+    "tech_abstract": {
+      "url": "https://images.unsplash.com/photo-1764258560300-2346b28b4e7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGJsdWUlMjB0ZWNobm9sb2d5JTIwbmV0d29yayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzY4MzAwMzY1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue glowing lines. Use for 'Analytics' or 'Super Admin' login background.",
+      "category": "background"
+    },
+    "library_study": {
+      "url": "https://images.unsplash.com/photo-1741699427799-3fbb70fce948?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwY2FtcHVzJTIwbW9kZXJuJTIwYXJjaGl0ZWN0dXJlJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzY4MzAwMzYwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Student studying in a grand library. Use for 'Academics' or 'Research' section.",
+      "category": "content"
+    }
+  },
+  "instructions_to_main_agent": [
+    "IMPLEMENT THEME TOGGLE: The app must support both Light and Dark modes. Use the 'next-themes' or a simple context provider to toggle the '.dark' class on the HTML element.",
+    "USE SHADCN COMPONENTS: You have a library in 'src/components/ui'. Use them. Do not build buttons or inputs from scratch.",
+    "CUSTOMIZE SHADCN: Override the default 'radius' in 'tailwind.config.js' to '0.5rem' (8px) for a modern but professional look.",
+    "LAYOUT SEPARATION: Create distinct layouts for 'Public' (Landing), 'Student' (Portal), and 'Admin' (Dashboard). Do not share a single layout file.",
+    "DATA DENSITY: For Admin tables, use 'compact' spacing. Do not make rows too tall. Information density is key for admins.",
+    "EMPTY STATES: Always design empty states for tables/lists. Use a simple icon + text (e.g., 'No leads found').",
+    "MOBILE RESPONSIVENESS: All grids must collapse to 1 column on mobile ('grid-cols-1'). Navigation must become a hamburger menu or bottom bar.",
+    "TEST IDS: Add 'data-testid' to all buttons, inputs, and links. Format: 'kebab-case' (e.g., 'login-submit-btn')."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': Do not use generic centered layouts. Use asymmetry.",
+    "No Gradients on Text: Keep text solid for readability.",
+    "Glassmorphism: Use it sparingly (headers, modals) to add depth.",
+    "Spacing: Use 'gap-6' or 'gap-8' to let content breathe.",
+    "Micro-animations: Add 'active:scale-95' to all interactive elements."
+  ]
+}

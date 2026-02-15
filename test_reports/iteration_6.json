@@ -1,0 +1,92 @@
+{
+  "summary": "Completed testing of Student Query System and Counselling Panel fixes. All backend APIs working correctly. Frontend UI for both Student Queries and Counsellor Queries pages load and function properly. Fixed permission issue for /api/university/staff endpoint.",
+  
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {
+        "endpoint": "/api/university/staff",
+        "issue": "FIXED - Endpoint only allowed UNIVERSITY_ADMIN role, but Counselling Manager needs access to list counsellors for lead assignment",
+        "status": "FIXED"
+      }
+    ]
+  },
+  
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  
+  "passed_tests": [
+    "POST /api/queries - Create new query (student)",
+    "GET /api/queries/my-queries - Get student's queries",
+    "GET /api/queries/counsellor-queries - Get counsellor's assigned queries",
+    "POST /api/queries/{id}/reply - Reply to query",
+    "PUT /api/queries/{id}/status - Update query status",
+    "GET /api/queries/stats/summary - Get query statistics",
+    "GET /api/counselling/dashboard - Counselling manager dashboard loads",
+    "GET /api/leads - Leads list loads with proper data",
+    "Student Queries Page UI - renders with stats, query list, new query dialog",
+    "Counsellor Queries Page UI - renders with stats, filter tabs, query list",
+    "New Query Dialog - opens, accepts input, submits successfully",
+    "Query Reply Flow - counsellor can reply to student queries",
+    "Query Status Update - counsellor can close queries"
+  ],
+  
+  "test_report_links": [
+    "/app/backend/tests/test_query_system.py",
+    "/app/test_reports/pytest/pytest_results_iter6.xml"
+  ],
+  
+  "action_items": [],
+  
+  "critical_code_review_comments": [
+    "Student Query system fully implemented with CRUD operations",
+    "Query automatically links to student's assigned counsellor via leads",
+    "Both student and counsellor can reply to queries",
+    "Status transitions: pending -> replied -> closed work correctly",
+    "Stats endpoint provides accurate counts by status"
+  ],
+  
+  "updated_files": [
+    "/app/backend/server.py - Added COUNSELLING_MANAGER role to /api/university/staff endpoint",
+    "/app/backend/tests/test_query_system.py - Created new test file for query system"
+  ],
+  
+  "success_rate": {
+    "backend": "100% (10/10 tests passed)",
+    "frontend": "100% (All UI features tested and working)"
+  },
+  
+  "test_credentials": {
+    "Super Admin": {
+      "email": "admin@unify.com",
+      "password": "9939350820@#!",
+      "role": "super_admin"
+    },
+    "Counselling Manager": {
+      "university_id": "1b75e0cf-2bcf-4f27-88bc-76a9b56a804c",
+      "person_id": "TESTCM001",
+      "password": "TestCM@123",
+      "role": "counselling_manager"
+    },
+    "Test Student": {
+      "email": "teststudent@example.com",
+      "password": "TestStudent@123",
+      "role": "student"
+    }
+  },
+  
+  "seed_data_creation": "Created test student (teststudent@example.com) and lead for testing query system",
+  
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  
+  "mocked_apis": {
+    "has_mocked_apis": false,
+    "mocked_apis_list": []
+  },
+  
+  "context_for_next_testing_agent": "Iteration 6 features tested: 1) Student Query System - full CRUD with create, reply, status update, stats endpoints all working. 2) Student Panel - My Queries page shows queries with stats, new query dialog works. 3) Counsellor Panel - Student Queries page shows assigned queries with filter tabs. 4) Leads Page - Fixed permission issue, now loads correctly for Counselling Manager. Test student created: teststudent@example.com / TestStudent@123"
+}

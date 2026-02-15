@@ -1,0 +1,24 @@
+/* App specific styles - minimal as we use Tailwind */
+.App {
+  min-height: 100vh;
+}
+
+/* Ensure smooth page transitions */
+.App-header {
+  background-color: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Loading spinner container */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
